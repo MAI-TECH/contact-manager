@@ -1,6 +1,9 @@
 server:
   port: 8081
 
+msg:
+  title: Spring Boot + Thymeleaf CRUD Example
+
 spring:
   h2:
     console:
