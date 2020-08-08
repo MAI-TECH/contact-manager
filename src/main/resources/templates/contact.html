@@ -4,13 +4,14 @@
         <meta charset="UTF-8" />
         <title>View Contact</title>
         <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"/>
+        <link media="screen" rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.0/css/bootstrap.min.css}" type="text/css"/>
     </head>
     <body>
         <h1>View Contact</h1>
         <a th:href="@{/contacts}">Back to Contact List</a>
         <br/><br/>
         <div th:if="${contact}">
-            <table border="0">
+            <table border="0"class="table table-hover">
                 <tr>
                     <td>ID</td>
                     <td>:</td>

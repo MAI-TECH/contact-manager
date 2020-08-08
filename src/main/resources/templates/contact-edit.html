@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title th:text="${add} ? 'Create a Contact' : 'Edit a Contact'" />
         <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"/>
+        <link media="screen" rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.0/css/bootstrap.min.css}" type="text/css"/>
     </head>
     <body>
         <h1 th:text="${add} ? 'Create a Contact:' : 'Edit a Contact:'" />
@@ -11,7 +12,7 @@
         <br/><br/>
         <form th:action="${add} ? @{/contacts/add} : @{/contacts/{contactId}/edit(contactId=${contact.id})}"
               th:object="${contact}" method="POST">
-            <table border="0">
+            <table border="0" class="table table-hover">
                 <tr th:if="${contact.id}">
                     <td>ID</td>
                     <td>:</td>
